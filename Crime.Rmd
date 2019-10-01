@@ -22,11 +22,13 @@ scot_crime <- read.csv('data/crime_stats.csv', stringsAsFactors=FALSE)
 area_lookup <- read.csv('data/area_lookup.csv', stringsAsFactors=FALSE)
 ```
 
-## Scottish Crime Statistics
+# Scottish Crime Statistics
 
 This project analyses the rate per 10,000 population, of crimes and offences recorded by the police.  The data has been obtained from statistics.gov.scot<https://statistics.gov.scot>.
 
 For more information on the recorded crime figures please see <http://www.scotland.gov.uk/Topics/Statistics/Browse/Crime-Justice/PubRecordedCrime>.
+
+Initially the project looks at all recorded crime but the aim is to be able to develop it to be able to look at the lower level crime categories.
 
 ```{r include = FALSE}
 
