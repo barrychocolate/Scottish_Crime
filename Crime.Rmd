@@ -44,11 +44,14 @@ scot_all_crime <-   left_join(scot_all_crime, area_lookup, by = c("FeatureCode" 
 ```
 
 ## All Recorded Crime
+In this chart the values are plotted against a year.  The year value is provided as a two year date such as 2001/2002.  For the purpose of this chart values are plotted against the first year value.
 
 ```{r echo=FALSE, warning=FALSE}
 # Create a plot
 p <- plot_ly(scot_all_crime, x = ~DateCode, y = ~Value, color = ~Area) %>%
   layout(title = "All Scottish Crime",
+         annotations =  list(text = "Source: statistics.gov.scot", showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=420, yshift=-232),
     scene = list(
       xaxis = list(title = "Year"),
       yaxis = list(title = "Rate Per 10,000 Population")))%>%
